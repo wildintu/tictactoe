@@ -1,6 +1,5 @@
 
 #board {
-    table
     padding: 3em;
     text-align: center;
 }
@@ -11,7 +10,7 @@
     width: 302px;
 }
 
-.topleft {
+#topleft {
     float: left;
     height: 100px;
     width: 100px;
@@ -22,7 +21,7 @@
     border-right: 1px black solid;
 }
 
-.topcenter {
+#topcenter {
     float: left;
     height: 100px;
     width: 100px;
@@ -33,7 +32,7 @@
     border-right: 1px black solid;
 }
 
-.topright {
+#topright {
     float: left;
     height: 100px;
     width: 100px;
@@ -50,7 +49,7 @@
     width: 302px;
 }
 
-.midleft {
+#midleft {
     float: left;
     height: 100px;
     width: 100px;
@@ -61,7 +60,7 @@
     border-right: 1px black solid;
 }
 
-.midcenter {
+#midcenter {
     float: left;
     height: 100px;
     width: 100px;
@@ -72,7 +71,7 @@
     border-right: 1px black solid;
 }
 
-.midright {
+#midright {
     float: left;
     height: 100px;
     width: 100px;
@@ -89,7 +88,7 @@
     width: 302px;
 }
 
-.botleft {
+#botleft {
     float: left;
     height: 100px;
     width: 100px;
@@ -99,7 +98,7 @@
     border-right: 1px black solid;
 }
 
-.botcenter {
+#botcenter {
     float: left;
     height: 100px;
     width: 100px;
@@ -109,7 +108,7 @@
     border-right: 1px black solid;
 }
 
-.botright {
+#botright {
     float: left;
     height: 100px;
     width: 100px;
@@ -118,38 +117,38 @@
     justify-content: center;
 }
 
-.topleft:hover {
+#topleft:hover {
     cursor: pointer;
 }
 
-.topcenter:hover {
+#topcenter:hover {
     cursor: pointer;
 }
 
-.topright:hover {
+#topright:hover {
     cursor: pointer;
 }
 
-.midleft:hover {
+#midleft:hover {
     cursor: pointer;
 }
 
-.midcenter:hover {
+#midcenter:hover {
     cursor: pointer;
 }
 
-.midright:hover {
+#midright:hover {
     cursor: pointer;
 }
 
-.botleft:hover {
+#botleft:hover {
     cursor: pointer;
 }
 
-.botcenter:hover {
+#botcenter:hover {
     cursor: pointer;
 }
 
-.botright:hover {
+#botright:hover {
     cursor: pointer;
 }
