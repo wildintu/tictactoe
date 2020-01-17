@@ -1,12 +1,12 @@
 
 body {
-    background: url('marblebg.jpg');
+    background: url('./pictures/marblebg.jpg');
     background-size: cover;
     font-family: Shadows Into Light;
 }
 
 .cell {
-    font-size: 80px;
+    font-size: 0px;
 }
 
 #result {
@@ -146,3 +146,4 @@ h1 {
     background-color: black;
     color: lightgray;
 }
+
