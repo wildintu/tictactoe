@@ -45,7 +45,7 @@ function iClicked(e) {
                 cutepurr.play();
             }
         }
-        console.log(saveKaren)
+        //console.log(saveKaren)
         //console.log('saveKaren' + saveKaren);
         //console.log('checkDraw' + checkDraw(saveKaren));
         checkWinner(saveKaren);
