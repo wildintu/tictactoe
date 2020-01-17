@@ -10,6 +10,10 @@ body {
 
 #result {
     font-size: 25px;
+    margin-bottom: 25px;
+    display: inline-block
+    width: 400px;
+    height: 40px;
 }
 
 #board {

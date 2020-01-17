@@ -22,77 +22,91 @@ const winCombos = [
 //making a mark of X or O
 
 function iClicked(e) {
-    let saveKaren = '';
-    saveKaren = karen;
-    //console.log('e.target.textContent' + e.target.textContent);
-    if (e.target.textContent == 0) {
-        e.target.textContent = karen;
-        console.log('e.target.textContent' + e.target.textContent);
-        if (karen == 'X') {
-            karen = 'O';
-        } else {
-            karen = 'X';
+    if (!document.querySelector('#board').querySelector('#result').textContent.endsWith(' WINS!')) {
+        let saveKaren = '';
+        saveKaren = karen;
+        //console.log('e.target.textContent' + e.target.textContent);
+        if (e.target.textContent == 0) {
+            e.target.textContent = karen;
+            //console.log('e.target.textContent' + e.target.textContent);
+            if (karen == 'X') {
+                karen = 'O';
+            } else {
+                karen = 'X';
+            }
         }
-    };
-    //console.log('saveKaren' + saveKaren);
-    checkWinner(saveKaren);
 
+        //console.log('saveKaren' + saveKaren);
+        //console.log('checkDraw' + checkDraw(saveKaren));
+        checkWinner(saveKaren);
+        checkDraw();
+    }
 };
 
-//checkSquares();
-// //Add loop to go through winCombos - needs to check for 3 X's or 3 O's to find winner
-
-// let win = '';
-
+// check for the winner
 function checkWinner(karen) {
     if (checkHorizontal(karen) || checkVertical(karen) || checkDiagonal(karen)) {
-        document.querySelector('#board').querySelector('#result').textContent = karen + ' wins!';
+        document.querySelector('#board').querySelector('#result').textContent = karen + ' WINS!';
+        return;
+        // } else {
+        //       document.querySelector('#board').querySelector('#result').textContent = 'No winners!'
     }
-    // for (let i = 0; i < winCombos.length; i++) {
-    //     for (let j = 0; j < winCombos.length[i]; j++) {
-//         if(checkHorizontal(karen) === checkVertical(karen) === checkDiagonal(karen)) {
-//             return true;
-//             console.log('win')
-//         } else {
-//             return false;
-//         }
-//     };
-//   };
-}
+};
 
 
+
+//check horizontal rows for winner
 function checkHorizontal(karen) {
     //console.log('checkHorizontal'); 
-    console.log('squares ' + squares[0].textContent);
-    console.log('karen ' + karen);
-    console.log('first square ' + (squares[0].textContent == karen));
+    //console.log('squares ' + squares[0].textContent);
+    //console.log('karen ' + karen);
+    //console.log('first square ' + (squares[0].textContent == karen));
     if ((squares[0].textContent == karen && squares[1].textContent == karen && squares[2].textContent == karen) ||
-    (squares[3].textContent == karen && squares[4].textContent == karen && squares[5].textContent == karen) ||
-    (squares[6].textContent == karen && squares[7].textContent == karen && squares[8].textContent == karen)) {    
+        (squares[3].textContent == karen && squares[4].textContent == karen && squares[5].textContent == karen) ||
+        (squares[6].textContent == karen && squares[7].textContent == karen && squares[8].textContent == karen)) {
         return true;
     } else {
         return false;
     }
-}
+};
 
+//check vertical row for winner
 function checkVertical(karen) {
     if ((squares[0].textContent == karen && squares[3].textContent == karen && squares[6].textContent == karen) ||
-    (squares[1].textContent == karen && squares[4].textContent == karen && squares[7].textContent == karen) ||
-    (squares[2].textContent == karen && squares[5].textContent == karen && squares[8].textContent == karen)) {
+        (squares[1].textContent == karen && squares[4].textContent == karen && squares[7].textContent == karen) ||
+        (squares[2].textContent == karen && squares[5].textContent == karen && squares[8].textContent == karen)) {
         return true;
     } else {
         return false;
     }
-}
+};
 
+//check diagonal row for winner
 function checkDiagonal(karen) {
     if ((squares[0].textContent == karen && squares[4].textContent == karen && squares[8].textContent == karen) ||
-    (squares[2].textContent == karen && squares[4].textContent == karen && squares[6].textContent == karen)) {
+        (squares[2].textContent == karen && squares[4].textContent == karen && squares[6].textContent == karen)) {
         return true;
     } else {
         return false;
     }
-}
+};
+
+//check for a draw after all cells have mark
+function checkDraw() {
+    let draw = 0;
+    if (!document.querySelector('#board').querySelector('#result').textContent.endsWith(' WINS!')) {
+        for (i = 0; i < 9; i++) {
+            //console.log(squares[i].textContent);
+            if (squares[i].textContent != '') {
+                //console.log(draw);
+                draw++;
+            }
+        }
+    }
+    if (draw == 9) {
+        document.querySelector('#board').querySelector('#result').textContent = 'NO WINNERS!';
+    }
+};
 
 
 //reset the game board
@@ -100,4 +114,4 @@ function checkDiagonal(karen) {
 
 function resetGame() {
     window.location.reload()
-}
+};
