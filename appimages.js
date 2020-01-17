@@ -37,10 +37,12 @@ function iClicked(e) {
                 karen = 'BABY YODA';
                 e.target.style.background = `url(${pogroo}) no-repeat`;
                 e.target.style.backgroundSize = 'cover';
+                jump.play();
             } else {
                 karen = 'POGROO';
                 e.target.style.background = `url(${babyyoda}) no-repeat`;
                 e.target.style.backgroundSize = 'cover';
+                cutepurr.play();
             }
         }
         console.log(saveKaren)
