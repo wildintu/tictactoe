@@ -1,5 +1,5 @@
 let board;
-let karen = 'Pogroo';
+let karen = 'POGROO';
 let pogroo = 'pogroo.png';
 let babyyoda = 'babyyoda.png';
 
@@ -33,12 +33,12 @@ function iClicked(e) {
             // e.target.style.backgroundSize = 'cover';
             e.target.textContent = karen;
             //console.log('e.target.textContent' + e.target.textContent);
-            if (karen == 'Pogroo') {
-                karen = 'Baby Yoda';
+            if (karen == 'POGROO') {
+                karen = 'BABY YODA';
                 e.target.style.background = `url(${pogroo}) no-repeat`;
                 e.target.style.backgroundSize = 'cover';
             } else {
-                karen = 'Pogroo';
+                karen = 'POGROO';
                 e.target.style.background = `url(${babyyoda}) no-repeat`;
                 e.target.style.backgroundSize = 'cover';
             }
