@@ -1,55 +1,36 @@
 
+body {
+    background-color: lightgray;
+    font-family: Shadows Into Light;
+}
+
+.cell {
+    font-size: 80px;
+}
+
+#result {
+    font-size: 25px;
+}
+
 #board {
     padding: 3em;
     text-align: center;
 }
 
-.row1 {
-    clear: both;
-    margin: 0 auto;
-    width: 302px;
+h1 {
+    color: lightgray;
+    background-color: black;
+    font-size: 50px;
 }
 
-#topleft {
-    float: left;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px black solid;
-    border-right: 1px black solid;
-}
-
-#topcenter {
-    float: left;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px black solid;
-    border-right: 1px black solid;
-}
-
-#topright {
-    float: left;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px black solid;
-}
-
-.row2 {
+.row {
     clear: both;
     margin: 0 auto;
     text-align: center;
     width: 302px;
 }
 
-#midleft {
+.lefttop {
     float: left;
     height: 100px;
     width: 100px;
@@ -60,7 +41,7 @@
     border-right: 1px black solid;
 }
 
-#midcenter {
+.centertop {
     float: left;
     height: 100px;
     width: 100px;
@@ -71,7 +52,7 @@
     border-right: 1px black solid;
 }
 
-#midright {
+.righttop {
     float: left;
     height: 100px;
     width: 100px;
@@ -81,74 +62,82 @@
     border-bottom: 1px black solid;
 }
 
-.row3 {
+.leftmid {
+    float: left;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px black solid;
+    border-right: 1px black solid;
+}
+
+.centermid {
+    float: left;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px black solid;
+    border-right: 1px black solid;
+}
+
+.rightmid {
+    float: left;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px black solid;
+}
+
+.leftbot {
+    float: left;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px black solid;
+}
+
+.centerbot {
+    float: left;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px black solid;
+}
+
+.rightbot {
+    float: left;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell:hover {
+    cursor: pointer;
+    background-color: lightseagreen;
+}
+
+#reset-button {
     clear: both;
     margin: 0 auto;
+    margin-top: 125px;
     text-align: center;
     width: 302px;
 }
 
-#botleft {
-    float: left;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-right: 1px black solid;
-}
-
-#botcenter {
-    float: left;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-right: 1px black solid;
-}
-
-#botright {
-    float: left;
-    height: 100px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#topleft:hover {
-    cursor: pointer;
-}
-
-#topcenter:hover {
-    cursor: pointer;
-}
-
-#topright:hover {
-    cursor: pointer;
-}
-
-#midleft:hover {
-    cursor: pointer;
-}
-
-#midcenter:hover {
-    cursor: pointer;
-}
-
-#midright:hover {
-    cursor: pointer;
-}
-
-#botleft:hover {
-    cursor: pointer;
-}
-
-#botcenter:hover {
-    cursor: pointer;
-}
-
-#botright:hover {
-    cursor: pointer;
+.button {
+    font-family: Shadows Into Light;
+    background-color: black;
+    color: lightgray;
 }
