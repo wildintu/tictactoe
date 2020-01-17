@@ -1,6 +1,6 @@
 
 body {
-    background: url('./pictures/marblebg.jpg');
+    background: url('marblebg.jpg');
     background-size: cover;
     font-family: Shadows Into Light;
 }
